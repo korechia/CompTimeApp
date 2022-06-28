@@ -1,7 +1,7 @@
 {
   "name": "pwa-comptime",
   "version": "0.1.0",
-  "homepage": "http://korechia.github.io/CompTimeApp",
+  "homepage": "http://korechia.github.io/",
   "private": true,
   "dependencies": {
     "@react-native-firebase/app": "^14.9.4",

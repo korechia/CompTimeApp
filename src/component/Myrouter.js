@@ -150,7 +150,7 @@ return promise
       <div>
       {!isLoggedIn ? (
           <Routes>
-           <Route path="/CompTimeApp/Parameters" 
+           <Route path="/Parameters" 
         element= {<Signoff
           id= "Board"
           changeUser = {this.props.changeUser} 
@@ -159,7 +159,7 @@ return promise
           GetCurrentDate={this.props.GetCurrentDate}
             Authenticate={this.props.Authenticate}
         />} />
-         <Route path="/CompTimeApp/AddHours" 
+         <Route path="/AddHours" 
         element= {<Signoff 
           id="Board"
        changeUser = {this.props.changeUser} 
@@ -168,7 +168,7 @@ return promise
           GetCurrentDate={this.props.GetCurrentDate}
           Authenticate={this.props.Authenticate}
         />} />
-        <Route path="/CompTimeApp/RequestHours" 
+        <Route path="/RequestHours" 
         element= {<Signoff
           id="Board"
           changeUser = {this.props.changeUser} 
@@ -177,7 +177,7 @@ return promise
           GetCurrentDate={this.props.GetCurrentDate}
           Authenticate={this.props.Authenticate}
         />} />
-          <Route path="/CompTimeApp/History" 
+          <Route path="/History" 
           element={<Signoff
             id="Board"
         changeUser = {this.props.changeUser} 
@@ -186,7 +186,7 @@ return promise
           GetCurrentDate={this.props.GetCurrentDate}
           Authenticate={this.props.Authenticate}
            />} />
-            <Route path="/CompTimeApp/" 
+            <Route path="/" 
           element={<Signon 
             id="Board"
           changeUser = {this.props.changeUser} 
@@ -199,7 +199,7 @@ return promise
     </Routes>
         ):(
         <Routes>
-           <Route path="/CompTimeApp/Parameters" 
+           <Route path="/Parameters" 
         element= {<Parameters 
           id="Board"
           changeUser = {this.props.changeUser} 
@@ -208,7 +208,7 @@ return promise
           GetCurrentDate={this.props.GetCurrentDate}
             Authenticate={this.props.Authenticate}
         />} />
-         <Route path="/CompTimeApp/AddHours" 
+         <Route path="/AddHours" 
         element= {<AddHours 
           id="Board"
        changeUser = {this.props.changeUser} 
@@ -217,7 +217,7 @@ return promise
           GetCurrentDate={this.props.GetCurrentDate}
           Authenticate={this.props.Authenticate}
         />} />
-        <Route path="/CompTimeApp/RequestHours" 
+        <Route path="/RequestHours" 
         element= {<Hours 
           id="Board"
           changeUser = {this.props.changeUser} 
@@ -226,7 +226,7 @@ return promise
           GetCurrentDate={this.props.GetCurrentDate}
           Authenticate={this.props.Authenticate}
         />} />
-          <Route path="/CompTimeApp/History" 
+          <Route path="/History" 
           element={<History
             id="Board"
         changeUser = {this.props.changeUser} 
@@ -235,7 +235,7 @@ return promise
           GetCurrentDate={this.props.GetCurrentDate}
           Authenticate={this.props.Authenticate}
            />} />
-            <Route path="/CompTimeApp/" 
+            <Route path="/" 
           element={<Signon 
             id="Board"
           changeUser = {this.props.changeUser} 

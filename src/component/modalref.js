@@ -59,13 +59,13 @@ this.open()
   <div class="modal-content">
    {this.props.usernamestate.Authenticated ?(
    <ul>
-   <li><Link to="/CompTimeApp/AddHours" onClick={this.open}>Add Hours</Link>
+   <li><Link to="AddHours" onClick={this.open}>Add Hours</Link>
           </li>
-   		<li><Link to="/CompTimeApp/RequestHours" onClick={this.open}>Request Hours</Link>
+   		<li><Link to="/RequestHours" onClick={this.open}>Request Hours</Link>
           </li>
-          <li><Link to="/CompTimeApp/History" onClick={this.open}>History</Link>
+          <li><Link to="/History" onClick={this.open}>History</Link>
           </li>
-          <li><Link to="/CompTimeApp/" onClick={this.signout}>Log Out</Link>
+          <li><Link to="/" onClick={this.signout}>Log Out</Link>
           </li>
           </ul>
           ):(
