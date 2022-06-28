@@ -1,0 +1,95 @@
+Google firebase
+-------------------------------------
+
+meditechcomptimeutility@gmail.Com
+
+TonyGroup26!
+-----------------------------------
+Steps:
+
+npx create-react-app my-app 
+
+
+Check to see where node is running
+sudo lsof -i -P
+
+If is running on LocalHost:30000 and see react window then it is working
+
+if is running on another local host such as LocalHost:8081 then you should uninstall global npm and install using only npx command above.
+
+
+
+Error: Can't resolve react-router-dom
+Solve: npm install react-router-dom
+
+Error: opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
+Solve:export NODE_OPTIONS=--openssl-legacy-provider
+
+npm install firebase
+
+Do not run npm audit command as this could cuase problems!!
+
+
+Error:Failed to compile.
+./src/Firebase.js
+Module not found: Can't resolve 'firebase' in '/Users/kathleenorechia/Documents/TonyProject/reactp/pwa-comptime/src'
+Module not found: Can't resolve 'firebase'
+Problem:You are not using the new Modular syntax. You can keep using existing code by changing the imports to compat version
+solve: remove= import * as firebase from 'firebase';
+replacewith= import firebase from 'firebase/compat/app'
+
+ Error:command not found firebase  
+solution: sudo npm i -g firebase-tools
+
+firebase init
+
+error: Error: Failed to list Firebase projects
+solution: firebase login
+firebase projects:list 
+
+firebase init
+--add functions and database emulator
+firebase emulators:start
+
+error:The webpage at http://localhost:6000/ might be temporarily down or it may have moved permanently to a new web address.
+solution: Do nnot use port 6000
+
+
+Good places for documentation 
+examples
+https://firebase.google.com/docs/database/web/read-and-write
+function library:
+https://firebase.google.com/docs/reference/js/database.md#database_package
+
+------------------
+TypeError: _firebase_js__WEBPACK_IMPORTED_MODULE_7__.default.database is not a function
+solution:use following code in firbase
+
+https://firebase.google.com/docs/database/web/start
+
+v9 import code:
+https://www.codegrepper.com/code-examples/whatever/firebase+v9+import
+
+Module 9 for firebase version 9
+
+to confirm version 9:
+npm uninstall firebase
+npm i firebase@9.8.1
+
+problem emulator not working:emulator:start is not a Firebase command
+solution:npm install @google-cloud/functions-emulator
+
+firebase does not log user out of google account, so there credentials will automatically allow them to access on next run. Not a sign out.
+
+rules:
+"auth.token.email.endsWith('@meditech.com')"
+
+
+access ui:
+https://github.com/firebase/firebaseui-web-react
+https://npm.io/package/firebaseui_react_v9
+import legacy
+sh: react-scripts: command not found
+
+npm i react-scripts
+

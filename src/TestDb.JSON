@@ -1,0 +1,31 @@
+{
+    "Users":{
+        "korechia":{
+            "name":"Kathleen",
+            "Supervisor":"tony",
+            "SupervisorE":"Tony@email.com",
+            "hours":5,
+            "history":{
+                 "1":{
+                    "date":"2/14/22",
+                    "hours":10,
+                    "approved":"Y",
+                    "voidstatus":"Y",
+                    },
+                "2":{
+                    "date":"2/14/22",
+                    "hours":20
+                    }
+                }},
+        "kwong":{
+            "name":"Kenny",
+            "hours":100,
+            "Supervisor":"tony",
+            "SupervisorE":"Tony@email.com",
+            "history":[
+            ["2/30/22",7],
+            ["2/24/22",7]
+            ],
+            }
+    }
+}
