@@ -1,5 +1,9 @@
 Google firebase
 -------------------------------------
+
+meditechcomptimeutility@gmail.Com
+
+TonyGroup26!
 -----------------------------------
 Steps:
 
@@ -78,7 +82,7 @@ solution:npm install @google-cloud/functions-emulator
 firebase does not log user out of google account, so there credentials will automatically allow them to access on next run. Not a sign out.
 
 rules:
-"auth.token.email.endsWith('@meditech.com')"
+  
 
 
 access ui:
