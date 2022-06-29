@@ -20,6 +20,8 @@ Solve: npm install react-router-dom
 
 Error: opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
 Solve:export NODE_OPTIONS=--openssl-legacy-provider
+or see website for alt solution: https://dev.to/jasoncruzdev/how-to-solve-opensslerrorstack-error03000086digital-envelope-routinesinitialization-error-error--2jd7
+
 
 npm install firebase
 
