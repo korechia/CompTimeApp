@@ -30,7 +30,7 @@ class Modalref extends Component {
 			document.getElementsByClassName("modal")[0].style.display="block";
 		}
 		}
-async signout(){
+ signout=async()=>{
 const auth = getAuth();
 await signOut(auth).then(() => {
   // Sign-out successful.

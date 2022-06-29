@@ -67,7 +67,7 @@ signOut(auth).then(() => {
   		if(this.props.usernamestate.Authenticated){
   			console.log("renderA")
 		console.log(this.props.usernamestate.Authenticated)
-		window.location.href = '/RequestHours';
+		//window.location.href = '/RequestHours';
 	}
     return (
     	<div class="title">
