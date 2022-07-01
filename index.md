@@ -2,7 +2,7 @@
 
 You can use the [editor on GitHub](https://github.com/korechia/CompTimeApp/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Sand box allows you to edit code a preview output in the same location. link to [Code sandbox Editor](https://codesandbox.io/s/github/korechia/CompTimeApp/?file=/src/App.js)
+Sand box allows you to edit code a preview output in the same location. link to [Code sandbox Editor][https://codesandbox.io/s/github/korechia/CompTimeApp/?file=/src/App.js](https://codesandbox.io/s/delicate-rain-llhpve)
 
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
