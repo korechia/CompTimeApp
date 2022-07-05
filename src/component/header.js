@@ -8,7 +8,9 @@ class Header extends Component {
     return (
         <div className="header"><div className="logo"><img src={logopic} id="logo" /></div>
  <div className="wordH">Compensation Time Routine</div>
-<Modalref usernamestate={this.props.usernamestate} />
+<Modalref usernamestate={this.props.usernamestate} 
+changeUser = {this.props.changeUser}
+Authenticate={this.props.Authenticate} />
 <div id="demo"></div>
 </div>
         )
