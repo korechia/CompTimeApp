@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Signon from "./Signon.js";
 import History from "./History.js";
 import Hours from "./Hours";
 import AddHours from "./AddHours.js";
@@ -34,6 +35,12 @@ class MyRouter extends Component {
         />} />
           <Route path="/History" 
           element={<History
+          changeUser = {this.changeUser} 
+          CalcHours={this.CalcHours}
+          usernamestate={this.props.usernamestate}
+           />} />
+ <Route path="/" 
+          element={<Signon
           changeUser = {this.changeUser} 
           CalcHours={this.CalcHours}
           usernamestate={this.props.usernamestate}
