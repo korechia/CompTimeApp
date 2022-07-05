@@ -1,5 +1,7 @@
 
 import React, { Component} from 'react';
+import { database, app} from '../firebase.js';
+import {getAuth, signOut} from "firebase/auth";
 import "./Comptime.css";
 import {
   Link
@@ -19,6 +21,19 @@ class Modalref extends Component {
    componentWillUnmount() {
     document.removeEventListener("mousedown", this.handleClickOutside);
   }
+	
+	 signout=async()=>{
+const auth = getAuth();
+await signOut(auth).then(() => {
+  // Sign-out successful.
+   this.props.Authenticate();
+}).catch((error) => {
+  // An error happened.
+  //alert(error)
+});
+this.open()
+
+}
 
 	open(){
 		var modald=document.getElementsByClassName("modal")[0].style.display;
@@ -44,6 +59,7 @@ class Modalref extends Component {
 <div id="myModal" class="modal">
 
   <div class="modal-content">
+   {this.props.usernamestate.Authenticated ?(
    <ul>
    <li><Link to="AddHours" onClick={this.open}>Add Hours</Link>
           </li>
@@ -51,7 +67,16 @@ class Modalref extends Component {
           </li>
           <li><Link to="/History" onClick={this.open}>History</Link>
           </li>
+          <li><Link to="/" onClick={this.signout}>Log Out</Link>
+          </li>
           </ul>
+          ):(
+          <ul>
+          <li>
+            <Link to="/" onClick={this.open}>Home</Link>
+          </li>
+        </ul>
+        )}
   </div>
 
 </div>
