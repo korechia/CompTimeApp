@@ -22,30 +22,15 @@ class MyRouter extends Component {
         <Routes>
          <Route path="/AddHours" 
         element= {<AddHours 
-          id="Board"
-       changeUser = {this.props.changeUser} 
           usernamestate={this.props.usernamestate}
-          CalcHours={this.props.CalcHours}
-          GetCurrentDate={this.props.GetCurrentDate}
-          Authenticate={this.props.Authenticate}
         />} />
         <Route path="/RequestHours" 
         element= {<Hours 
-          id="Board"
-          changeUser = {this.props.changeUser} 
           usernamestate={this.props.usernamestate}
-          CalcHours={this.props.CalcHours}
-          GetCurrentDate={this.props.GetCurrentDate}
-          Authenticate={this.props.Authenticate}
         />} />
           <Route path="/History" 
           element={<History
-            id="Board"
-        changeUser = {this.props.changeUser} 
           usernamestate={this.props.usernamestate}
-          CalcHours={this.props.CalcHours}
-          GetCurrentDate={this.props.GetCurrentDate}
-          Authenticate={this.props.Authenticate}
            />} />
         </Routes>
       </div>
