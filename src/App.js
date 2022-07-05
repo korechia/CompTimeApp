@@ -19,7 +19,7 @@ export class App extends Component {
     }
   }
   componentDidMount(){
-  this.changeUser("korechia","Kathleen",this.Calchours)
+  this.changeUser("korechia","Kathleen",this.CalcHours)
 }
 
     changeUser = (Uname,NameD,fun)=> {
@@ -70,6 +70,7 @@ return total;
   console.log("====");
   console.log("Users/"+this.state.user+"/newhistory");
 var promise=get(child(ref(database),"Users/"+this.state.user))
+return promise;
 }
 
   render() {
