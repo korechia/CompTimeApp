@@ -19,14 +19,10 @@ export class App extends Component {
     }
   }
   componentDidMount(){
-  this.changeUser("korechia","Kathleen",)
+  this.changeUser("korechia","Kathleen",this.Calchours)
 }
 
     changeUser = (Uname,NameD,fun)=> {
-    console.log(Uname);
-    console.log(this.state.Authenticated)
-    console.log("llllllllll")
-    console.log("UUUUUUUUUUUUUUU1");
       this.setState({user:Uname,
     name:NameD,
     superuser:superuser},fun);
@@ -46,7 +42,9 @@ export class App extends Component {
       all:data})
     var info = snapshot.val().newhistory;
     var total=0;
+    //Checks if the info object returned from the database has any key information
     var haskey=(info!=undefined && !!Object.keys(info).length);
+    //if it has a key then iterate through the keys and add up total hours.
     if(haskey){
     Object.keys(info)
     .forEach(item =>(total=this.IterateHours(info,item,total)))
@@ -59,9 +57,9 @@ export class App extends Component {
 }
 
 IterateHours(info,item,total){
+ //object.key is the standard format to get data
+ //however [] is used when placing a variable in the key location
 var Hdata=info[item];
-console.log("IIIITem")
-console.log(Hdata)
 if(Hdata.Void=="N"){
  total= Hdata.numhours+total;
 }
