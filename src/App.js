@@ -82,6 +82,7 @@ return promise
       <div Class="body">
       <Myrouter
         usernamestate={this.state}
+        CalcHours={this.CalcHours}
   />
       </div>
       </div>
