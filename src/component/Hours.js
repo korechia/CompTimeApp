@@ -11,7 +11,34 @@ constructor(props) {
     etime:'',
     ohour:''}
   }
+AddHours= () =>{
+		console.log("Add");
+		console.log(this.props.usernamestate.user);
+// Create a new post reference with an auto-generated id
+const location="Users/"+this.props.usernamestate.user+"/newhistory"
+const postListRef = ref(database, location);
+const newPostRef = push(postListRef);
+var hour=0;
+hour =-this.state.ohour
 
+ set(newPostRef,{
+ 	CreateDate:this.props.GetCurrentDate(),
+    startdate:this.state.sdate,
+    starttime:this.state.stime,
+    Approved:"Y",
+    Void:"N",
+    VoidUser:"",
+    enddate:this.state.edate,
+    endtime:this.state.etime,
+    numhours: hour
+  }).then(()=>{
+  	console.log("this has been successful");
+ console.log(this.props.usernamestate.user);
+	}
+  );
+  this.props.CalcHours();
+}
+    
 handleChange=({target})=> {
     this.setState({[target.name]: target.value});
   }
@@ -41,6 +68,8 @@ handleChange=({target})=> {
          <label> Number of hours to be removed </label>
          <input type="number" name="ohour" value ={this.state.ohour}
           onChange={this.handleChange}/>
+<br/>
+<button onClick={this.AddHours} type="submit" id="submit" >Add Request</button>
 </div>
 </div>
 </div>
