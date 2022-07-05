@@ -103,6 +103,7 @@ return promise;
         usernamestate={this.state}
         changeUser = {this.changeUser} 
         CalcHours={this.CalcHours}
+        GetCurrentDate={this.GetCurrentDate}
   />
       </div>
       </div>
