@@ -23,7 +23,7 @@ class MyRouter extends Component {
         <Routes>
          <Route path="/AddHours" 
         element= {<AddHours 
-         GGetCurrentDate={this.props.GetCurrentDate}
+         GetCurrentDate={this.props.GetCurrentDate}
           changeUser = {this.props.changeUser} 
           CalcHours={this.props.CalcHours}
           usernamestate={this.props.usernamestate}
