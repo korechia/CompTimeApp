@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./Comptime.css";
+import Table from "./Table.js";
 
 class AddHours extends Component {
 	constructor(props) {
