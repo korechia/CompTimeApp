@@ -25,8 +25,8 @@ export class App extends Component {
       usernamestate={this.state}
       <div Class="body">
       <Myrouter
-      changeUser = {this.changeUser} 
         usernamestate={this.state}
+  />
       </div>
       </div>
       </Router>
