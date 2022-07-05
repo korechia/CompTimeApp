@@ -24,8 +24,7 @@ export class App extends Component {
 
     changeUser = (Uname,NameD,fun)=> {
       this.setState({user:Uname,
-    name:NameD,
-    superuser:superuser},fun);
+    name:NameD},fun);
    //var total=this.CalcHours();
   console.log("hour");
   }
