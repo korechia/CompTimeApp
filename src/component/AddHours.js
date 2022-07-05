@@ -9,7 +9,8 @@ class AddHours extends Component {
     stime:"",
     sdate:"",
     edate:'',
-    etime:''}
+    etime:'',
+    Program:"Add Hours"}
   }
   	AddHours= () =>{
 		console.log("Add");
@@ -70,7 +71,17 @@ const newPostRef = push(postListRef);
 <br/>
 <button onClick={this.AddHours} type="submit" id="submit" >Add Hours</button>
 </div>
+<div class="Request">
+   <h2> Hours Added today </h2>
+    <div class="History">
+     <Table usernamestate={this.props.usernamestate} 
+ CalcHours={this.props.CalcHours}
+ GetCurrentDate={this.props.GetCurrentDate} 
+ Program={this.state.Program}/>
+ </div>
 </div>
+</div>
+
 </div>
         )
   }
