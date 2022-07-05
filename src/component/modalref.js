@@ -50,7 +50,7 @@ class Modalref extends Component {
    		<li><Link to="/RequestHours" onClick={this.open}>Request Hours</Link>
           </li>
           <li><Link to="/History" onClick={this.open}>History</Link>
-          </li
+          </li>
           </ul>
          }
   </div>
