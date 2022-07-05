@@ -23,30 +23,30 @@ class MyRouter extends Component {
         <Routes>
          <Route path="/AddHours" 
         element= {<AddHours 
-         GetCurrentDate={this.GetCurrentDate}
-          changeUser = {this.changeUser} 
-          CalcHours={this.CalcHours}
+         GGetCurrentDate={this.props.GetCurrentDate}
+          changeUser = {this.props.changeUser} 
+          CalcHours={this.props.CalcHours}
           usernamestate={this.props.usernamestate}
         />} />
         <Route path="/RequestHours" 
         element= {<Hours 
-          GetCurrentDate={this.GetCurrentDate}
-          changeUser = {this.changeUser} 
-          CalcHours={this.CalcHours}
+          GetCurrentDate={this.props.GetCurrentDate}
+          changeUser = {this.props.changeUser} 
+          CalcHours={this.props.CalcHours}
           usernamestate={this.props.usernamestate}
         />} />
           <Route path="/History"
           element={<History
-           GetCurrentDate={this.GetCurrentDate}
-          changeUser = {this.changeUser} 
-          CalcHours={this.CalcHours}
+        GetCurrentDate={this.props.GetCurrentDate}
+          changeUser = {this.props.changeUser} 
+          CalcHours={this.props.CalcHours}
           usernamestate={this.props.usernamestate}
            />} />
  <Route path="/" 
           element={<Signon
-          GetCurrentDate={this.GetCurrentDate}
-          changeUser = {this.changeUser} 
-          CalcHours={this.CalcHours}
+         GetCurrentDate={this.props.GetCurrentDate}
+          changeUser = {this.props.changeUser} 
+          CalcHours={this.props.CalcHours}
           usernamestate={this.props.usernamestate}
            />} />
         </Routes>
