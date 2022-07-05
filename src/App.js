@@ -14,7 +14,7 @@ export class App extends Component {
    constructor(props){
     super(props);
     this.state={user:"korechia",
-    name:"undefined",
+    name:"Kathleen",
              hours:0,
     }
   }
