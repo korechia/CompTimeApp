@@ -35,16 +35,16 @@ class MyRouter extends Component {
           CalcHours={this.CalcHours}
           usernamestate={this.props.usernamestate}
         />} />
-          <Route path="/History" 
-           GetCurrentDate={this.GetCurrentDate}
+          <Route path="/History"
           element={<History
+           GetCurrentDate={this.GetCurrentDate}
           changeUser = {this.changeUser} 
           CalcHours={this.CalcHours}
           usernamestate={this.props.usernamestate}
            />} />
  <Route path="/" 
-          GetCurrentDate={this.GetCurrentDate}
           element={<Signon
+          GetCurrentDate={this.GetCurrentDate}
           changeUser = {this.changeUser} 
           CalcHours={this.CalcHours}
           usernamestate={this.props.usernamestate}
