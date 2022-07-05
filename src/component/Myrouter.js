@@ -5,7 +5,6 @@ import Signon from "./Signon.js";
 import Hours from "./Hours";
 import AddHours from "./AddHours.js";
 import "./Comptime.css";
-import Parameters from "./Parameters.js";
 import { database, app} from '../firebase.js';
 import { getDatabase, ref, child, get} from 'firebase/database';
 import {getAuth} from "firebase/auth";
@@ -38,14 +37,6 @@ class MyRouter extends Component {
       <div>
       {!isLoggedIn ? (
           <Routes>
-           <Route path="/Parameters" 
-        element= {<Signoff
-          changeUser = {this.props.changeUser} 
-          usernamestate={this.props.usernamestate}
-          CalcHours={this.props.CalcHours}
-          GetCurrentDate={this.props.GetCurrentDate}
-            Authenticate={this.props.Authenticate}
-        />} />
          <Route path="/AddHours" 
         element= {<Signoff 
        changeUser = {this.props.changeUser} 
