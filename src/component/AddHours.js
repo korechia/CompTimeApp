@@ -11,7 +11,31 @@ class AddHours extends Component {
     edate:'',
     etime:''}
   }
-  
+  	AddHours= () =>{
+		console.log("Add");
+		console.log(this.props.usernamestate.user);
+    console.log(this.state.additionalHours);
+// Create a new post reference with an auto-generated id
+const location="Users/"+this.props.usernamestate.user+"/newhistory"
+const postListRef = ref(database, location);
+const newPostRef = push(postListRef);
+ set(newPostRef,{
+    CreateDate:this.props.GetCurrentDate(),
+    startdate:this.state.sdate,
+    starttime:this.state.stime,
+    Approved:"Y",
+    Void:"N",
+    VoidUser:"",
+    enddate:this.state.edate,
+    endtime:this.state.etime,
+    numhours:parseInt(this.state.additionalHours)
+  }).then(()=>{
+  	console.log("this has been successful");
+ console.log(this.props.usernamestate.user);
+	}
+  );
+  this.props.CalcHours();
+}
 	handleChange=({target})=> {
     this.setState({[target.name]: target.value});
   }
@@ -43,6 +67,8 @@ class AddHours extends Component {
         <input type="number" name="additionalHours" value={this.state.additionalHours}
          onChange={this.handleChange}/>
 </div>
+<br/>
+<button onClick={this.AddHours} type="submit" id="submit" >Add Hours</button>
 </div>
 </div>
 </div>
