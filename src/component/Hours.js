@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 import "./Comptime.css";
-import { database, app} from '../firebase.js';
-import DirectButtons from "./DirectButtons.js"
-import { getDatabase, ref, push, set, child ,get} from "firebase/database";
-import Table from "./Table.js";
-import GetIntervalsHours from "./GetIntervalHours.js"
 
 class Hours extends Component {
 constructor(props) {
@@ -42,7 +37,7 @@ handleChange=({target})=> {
         <label>                  Time</label>
         <input type="time" name="etime" value={this.state.etime}
          onChange={this.handleChange}/>
-         <br/
+         <br/>
          <label> Number of hours to be removed </label>
          <input type="number" name="ohour" value ={this.state.ohour}
           onChange={this.handleChange}/>
