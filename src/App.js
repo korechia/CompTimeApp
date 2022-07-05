@@ -18,15 +18,33 @@ export class App extends Component {
              hours:0,
     }
   }
+  componentDidMount(){
+  this.changeUser("korechia","Kathleen",)
+}
+
+    changeUser = (Uname,NameD,fun)=> {
+    console.log(Uname);
+    console.log(this.state.Authenticated)
+    console.log("llllllllll")
+    console.log("UUUUUUUUUUUUUUU1");
+      this.setState({user:Uname,
+    name:NameD,
+    superuser:superuser},fun);
+   //var total=this.CalcHours();
+  console.log("hour");
+  }
    CalcHours=()=>{
     console.log("calculate");
      var promise= this.getData();
       console.log(promise);
       promise.then((snapshot)=>{
+  console.log("value in promise")
+  console.log(snapshot)
   if (snapshot.exists()) {
+     var data = snapshot.val();
+    this.setState({response:data.newhistory,
+      all:data})
     var info = snapshot.val().newhistory;
-    console.log("get")
-    console.log(info);
     var total=0;
     var haskey=(info!=undefined && !!Object.keys(info).length);
     if(haskey){
@@ -55,21 +73,6 @@ return total;
   console.log("====");
   console.log("Users/"+this.state.user+"/newhistory");
 var promise=get(child(ref(database),"Users/"+this.state.user))
-
-promise.then((snapshot) => {
-  console.log("value in promise")
-  console.log(snapshot)
-  if (snapshot.exists()) {
-    info = snapshot.val();
-    this.setState({response:info.newhistory,
-      all:info})
-  } else {
-    console.log("No data available");
-  }
-}).catch((error) => {
-  console.log(error);
-});
-return promise
 }
 
   render() {
@@ -82,6 +85,7 @@ return promise
       <div Class="body">
       <Myrouter
         usernamestate={this.state}
+        changeUser = {this.changeUser} 
         CalcHours={this.CalcHours}
   />
       </div>
