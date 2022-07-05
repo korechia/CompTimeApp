@@ -22,7 +22,9 @@ export class App extends Component {
     return (
       <Router>
       <div>
+      <Header
       usernamestate={this.state}
+  />
       <div Class="body">
       <Myrouter
         usernamestate={this.state}
