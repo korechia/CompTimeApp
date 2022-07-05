@@ -4,6 +4,9 @@ import "./Comptime.css";
 
 
 class History extends Component {
+    constructor(props){
+    super(props);
+  }
 
   render() {
     return (
