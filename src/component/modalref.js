@@ -1,8 +1,6 @@
 
 import React, { Component} from 'react';
 import "./Comptime.css";
-import { database, app} from '../firebase.js';
-import {getAuth, signOut} from "firebase/auth";
 import {
   Link
 } from "react-router-dom";
@@ -30,18 +28,6 @@ class Modalref extends Component {
 			document.getElementsByClassName("modal")[0].style.display="block";
 		}
 		}
- signout=async()=>{
-const auth = getAuth();
-await signOut(auth).then(() => {
-  // Sign-out successful.
-   this.props.Authenticate();
-}).catch((error) => {
-  // An error happened.
-  //alert(error)
-});
-this.open()
-
-}
 
 	handleClickOutside(event) {
     if (this.wrapperRef && !this.wrapperRef.current.contains(event.target)) {
@@ -54,10 +40,10 @@ this.open()
     <div class= "modalbutton">
         <button id="myBtn" onClick={this.open}><img src={buttonpic} /></button>
         </div>
+	
 <div id="myModal" class="modal">
 
   <div class="modal-content">
-   {this.props.usernamestate.Authenticated ?(
    <ul>
    <li><Link to="AddHours" onClick={this.open}>Add Hours</Link>
           </li>
@@ -68,13 +54,7 @@ this.open()
           <li><Link to="/" onClick={this.signout}>Log Out</Link>
           </li>
           </ul>
-          ):(
-          <ul>
-          <li>
-            <Link to="/" onClick={this.open}>Home</Link>
-          </li>
-        </ul>
-        )}
+         }
   </div>
 
 </div>
