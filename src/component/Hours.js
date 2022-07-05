@@ -9,7 +9,8 @@ constructor(props) {
     sdate:"",
     edate:'',
     etime:'',
-    ohour:''}
+    ohour:'',
+    Program:"Request Hours"}
   }
 AddHours= () =>{
 		console.log("Add");
@@ -71,6 +72,14 @@ handleChange=({target})=> {
 <br/>
 <button onClick={this.AddHours} type="submit" id="submit" >Add Request</button>
 </div>
+</div>
+<div class="Request">
+   <h2> Current Requested Hours off and Approval </h2>
+   <div class="History">
+ <Table usernamestate={this.props.usernamestate} 
+ CalcHours={this.props.CalcHours}
+ GetCurrentDate={this.props.GetCurrentDate} 
+ Program={this.state.Program}/></div>
 </div>
 </div>
 
