@@ -1,6 +1,7 @@
 
 import React, { Component} from 'react';  
 import "./Comptime.css";
+import Table from "./Table.js";
 
 
 class History extends Component {
