@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from "./component/header.js";
 import { database, app} from './firebase.js';
 import { getDatabase, ref, child, get} from 'firebase/database';
+import {getAuth} from "firebase/auth";
 import Myrouter from "./component/Myrouter.js";
 import {
   BrowserRouter as Router,
@@ -13,13 +14,36 @@ import {
 export class App extends Component {
    constructor(props){
     super(props);
-    this.state={user:"korechia",
-    name:"Kathleen",
+    this.state={user:"undefined",
+      name:"undefined",
+    all:undefined,
              hours:0,
     }
   }
-  componentDidMount(){
-  this.changeUser("korechia","Kathleen",this.CalcHours)
+componentDidMount(){
+  this.Authenticate()
+  console.log(window.location.pathname)
+  console.log(this.state.Authenticated)
+}
+
+ Authenticate=()=>{
+  console.log("parentwillmount")
+  getAuth().onAuthStateChanged((user) => {
+      if (user) {
+        console.log("true"+user)
+        console.log(user)
+        var email=user.email.substr(0, user.email.indexOf('@'));
+      this.setState({Authenticated:true},this.changeUser(email,user.displayName,this.CalcHours,email))
+        if( window.location.pathname == "/"){
+        window.location.href = '/RequestHours'; 
+        }
+      }else{
+        console.log("false"+user)
+        this.setState({Authenticated:false}, this.changeUser("undefined","undefined",this.CalcHours,"undefined"));
+        //alert("You are not Authenticated")
+        }
+})
+
 }
     GetCurrentDate=()=>{
     var today = new Date();
@@ -96,7 +120,9 @@ return promise;
       <Router>
       <div>
       <Header
+      changeUser = {this.changeUser} 
       usernamestate={this.state}
+      Authenticate={this.Authenticate}
   />
       <div Class="body">
       <Myrouter
