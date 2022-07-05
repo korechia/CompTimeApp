@@ -18,6 +18,8 @@ export class App extends Component {
       name:"undefined",
     all:undefined,
              hours:0,
+                     response:[],
+             Authenticated:true,
     }
   }
 componentDidMount(){
