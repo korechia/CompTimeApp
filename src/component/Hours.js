@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import "./Comptime.css";
+import { database, app} from '../firebase.js';
+import { getDatabase, ref, push, set, child ,get} from "firebase/database";
 //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
 import Table from "./Table.js";
 //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
