@@ -53,7 +53,7 @@ handleChange=({target})=> {
        <div class="Request">
        <h2> Request Hours off </h2>
        <div class="dropdown">
-{ //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%}
+{ /*$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%*/}
     <label>Start Day </label>
         <input type="date" name="sdate" value={this.state.sdate}
          onChange={this.handleChange}/>
@@ -71,9 +71,9 @@ handleChange=({target})=> {
          <label> Number of hours to be removed </label>
          <input type="number" name="ohour" value ={this.state.ohour}
           onChange={this.handleChange}/>
-	{//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!}
 <br/>
 <button onClick={this.AddHours} type="submit" id="submit" >Add Request</button>
+{/*END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!*/}
 </div>
 </div>
 </div>
