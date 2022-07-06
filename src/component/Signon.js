@@ -2,9 +2,11 @@
 import React, { Component } from 'react';
 import "./Comptime.css";
 import { database, app} from '../firebase.js';
+ //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
 import { signInWithRedirect, getAuth,GoogleAuthProvider} from "firebase/auth";
 import {getRedirectResult, signOut} from "firebase/auth";
 import {onAuthStateChanged,EmailAuthProvider} from "firebase/auth";
+ //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
 import vacation from "./vacation.jpeg";
 
 class Signon extends Component {
@@ -12,7 +14,7 @@ class Signon extends Component {
     super(props);
     this.state ={signin:false}
   }
-
+ //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
 signin(){
 const auth = getAuth();
 console.log(auth);
@@ -42,27 +44,9 @@ async componentDidMount(){
   	console.log(getAuth());
   }
 	}
-
-
-signout(){
-const auth = getAuth();
-signOut(auth).then(() => {
-  // Sign-out successful.
-  alert("out successful");
-  this.props.changeUser("undefined","undefined",this.signcall);
-}).catch((error) => {
-  // An error happened.
-  //alert(error)
-});
-}
-//<button onClick={()=>(this.signout())}>signout of app </button>
-
+ //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
+	
   render() {
-  		if(this.props.usernamestate.Authenticated){
-  			console.log("renderA")
-		console.log(this.props.usernamestate.Authenticated)
-		//window.location.href = '/RequestHours';
-	}
     return (
     	<div class="title">
     	<h3>Welcome to Tony's Group <br/> Compensation Time Utility</h3>
