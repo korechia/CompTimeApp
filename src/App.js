@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from "./component/header.js";
+ //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
 import { database, app} from './firebase.js';
 import { getDatabase, ref, child, get} from 'firebase/database';
 import Myrouter from "./component/Myrouter.js";
@@ -18,6 +19,7 @@ export class App extends Component {
              hours:0,
     }
   }
+   //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
   componentDidMount(){
   this.changeUser("korechia","Kathleen",this.CalcHours)
 }
@@ -65,14 +67,16 @@ if(Hdata.Void=="N"){
 return total;
 }
  getData=()=>{
-    console.log("GGGGGUUUUUUUUUUUUUUU");
   var info = 0;
   console.log("====");
   console.log("Users/"+this.state.user+"/newhistory");
+ //the database promises to give me the information later is returned from function
 var promise=get(child(ref(database),"Users/"+this.state.user))
+// so if i were to output promise variable it would show as pending.
 return promise;
 }
-
+ //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
+  
   render() {
     return (
       <Router>
@@ -83,8 +87,10 @@ return promise;
       <div Class="body">
       <Myrouter
         usernamestate={this.state}
+ //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
         changeUser = {this.changeUser} 
         CalcHours={this.CalcHours}
+ //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
   />
       </div>
       </div>
