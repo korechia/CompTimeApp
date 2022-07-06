@@ -1,3 +1,4 @@
+ //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from "firebase/database";
 import { connectDatabaseEmulator} from "firebase/database";
@@ -20,7 +21,7 @@ export const app = initializeApp(firebaseConfig);
 // Get a reference to the database service
 export const database = getDatabase(app);
 //connectDatabaseEmulator(database, "localhost", 5000);
-
+//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
 
 
 
