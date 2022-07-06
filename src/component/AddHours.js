@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./Comptime.css";
 
 class AddHours extends Component {
+	  //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
 	constructor(props) {
     super(props);
     this.state ={
@@ -39,7 +40,7 @@ const newPostRef = push(postListRef);
 	handleChange=({target})=> {
     this.setState({[target.name]: target.value});
   }
-
+ //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
 
   render() {
     return (
@@ -49,6 +50,7 @@ const newPostRef = push(postListRef);
        <div class="Request">
        <h2> Add Hours Earned </h2>
        <div class="dropdown">
+{/*$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%*/}
     <label>Start Day </label>
         <input type="date" name="sdate" value={this.state.sdate}
          onChange={this.handleChange}/>
@@ -69,6 +71,7 @@ const newPostRef = push(postListRef);
 </div>
 <br/>
 <button onClick={this.AddHours} type="submit" id="submit" >Add Hours</button>
+{/*END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!*/}
 </div>
 </div>
 </div>
