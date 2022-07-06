@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import "./Comptime.css";
 import Table from "./Table.js";
+import { database, app} from '../firebase.js';
+import { getDatabase, ref, push, set, child ,get} from "firebase/database";
 
 class Hours extends Component {
 constructor(props) {
