@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import "./Comptime.css";
+ //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
 import Table from "./Table.js";
+//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
 
 class AddHours extends Component {
 	constructor(props) {
@@ -75,10 +77,12 @@ const newPostRef = push(postListRef);
 <div class="Request">
    <h2> Hours Added today </h2>
     <div class="History">
+{/*$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%*/}
      <Table usernamestate={this.props.usernamestate} 
  CalcHours={this.props.CalcHours}
  GetCurrentDate={this.props.GetCurrentDate} 
  Program={this.state.Program}/>
+{/*END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!*/}
  </div>
 </div>
 </div>
