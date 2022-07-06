@@ -21,8 +21,8 @@ class MyRouter extends Component {
       <div>
 
         <Routes>
+    //Pieces:$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
          <Route path="/AddHours"
-    {//Pieces:$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%}
         element= {<AddHours 
           changeUser = {this.props.changeUser} 
           CalcHours={this.props.CalcHours}
@@ -46,8 +46,8 @@ class MyRouter extends Component {
           CalcHours={this.props.CalcHours}
           usernamestate={this.props.usernamestate}
            />} />
+//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
         </Routes>
-{//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!}
       </div>
   )}
 }
