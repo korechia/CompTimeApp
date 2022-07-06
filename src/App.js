@@ -125,13 +125,13 @@ return promise;
     return (
       <Router>
       <div>
+     {/*$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%*/}
       <Header
       changeUser = {this.changeUser} 
       usernamestate={this.state}
-  {/*$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%*/}
       Authenticate={this.Authenticate}
-{/*END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!*/}
   />
+       {/*END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!*/}
       <div Class="body">
       <Myrouter
         usernamestate={this.state}
