@@ -26,8 +26,9 @@ const location="Users/"+this.props.usernamestate.user+"/newhistory"
 const postListRef = ref(database, location);
 const newPostRef = push(postListRef);
  set(newPostRef,{
-   //CreateDate:this.props.GetCurrentDate(),
-   CreateDate:"2022-08-07",
+//$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
+   CreateDate:this.props.GetCurrentDate(),
+//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
     startdate:this.state.sdate,
     starttime:this.state.stime,
     Approved:"Y",
