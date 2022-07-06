@@ -1,7 +1,9 @@
 
 import React, { Component} from 'react';  
 import "./Comptime.css";
+//$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
 import Table from "./Table.js";
+//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
 
 
 class History extends Component {
@@ -18,10 +20,12 @@ class History extends Component {
          </div>
         <div class="Request">
 <div class="History">
+    {/*$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%*/}
  <Table usernamestate={this.props.usernamestate} 
  CalcHours={this.props.CalcHours}
  GetCurrentDate={this.props.GetCurrentDate} 
  Program={this.state.Program}/>
+   {/*END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!*/}
 </div>
 </div>
 
