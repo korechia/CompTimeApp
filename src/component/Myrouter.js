@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import History from "./History.js";
+ //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
 import Signoff from "./signoff.js";
+ //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
 import Signon from "./Signon.js";
 import Hours from "./Hours";
 import AddHours from "./AddHours.js";
 import "./Comptime.css";
 import { database, app} from '../firebase.js';
 import { getDatabase, ref, child, get} from 'firebase/database';
+ //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
 import {getAuth} from "firebase/auth";
+ //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
 import {
   BrowserRouter as Router,
   Routes,
@@ -28,7 +32,7 @@ import {
 
 
 class MyRouter extends Component {
-
+ //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
    render(){
    var isLoggedIn = this.props.usernamestate.Authenticated;
 
@@ -105,6 +109,7 @@ class MyRouter extends Component {
           GetCurrentDate={this.props.GetCurrentDate}
           Authenticate={this.props.Authenticate}
            />} />
+{/*END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!*/}
         </Routes>)}
       </div>
   )}
