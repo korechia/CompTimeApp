@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import Header from "./component/header.js";
 import { database, app} from './firebase.js';
 import { getDatabase, ref, child, get} from 'firebase/database';
+ //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
 import {getAuth} from "firebase/auth";
+ //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
 import Myrouter from "./component/Myrouter.js";
 import {
   BrowserRouter as Router,
@@ -22,6 +24,7 @@ export class App extends Component {
              Authenticated:true,
     }
   }
+//$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
 componentDidMount(){
   this.Authenticate()
   console.log(window.location.pathname)
@@ -47,6 +50,7 @@ componentDidMount(){
 })
 
 }
+   //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
     GetCurrentDate=()=>{
     var today = new Date();
     return this.formatDate(today);
@@ -124,7 +128,9 @@ return promise;
       <Header
       changeUser = {this.changeUser} 
       usernamestate={this.state}
+  {/*$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%*/}
       Authenticate={this.Authenticate}
+{/*END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!*/}
   />
       <div Class="body">
       <Myrouter
