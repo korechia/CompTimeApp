@@ -28,8 +28,9 @@ var hour=0;
 hour =-this.state.ohour
 
  set(newPostRef,{
-   //CreateDate:this.props.GetCurrentDate(),
-	 CreateDate:"2022-08-07",
+	 //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
+   CreateDate:this.props.GetCurrentDate(),
+//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
     startdate:this.state.sdate,
     starttime:this.state.stime,
     Approved:"Y",
