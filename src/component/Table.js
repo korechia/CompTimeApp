@@ -1,4 +1,4 @@
-
+ //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
 import React, { Component} from 'react';  
 import "./Comptime.css";
 import { database, app} from '../firebase.js';
@@ -80,3 +80,4 @@ if(this.props.Program=="History" && (Hdata.Void=="N" || (Hdata.Void=="Y" && !thi
   }
 }
 export default Table;
+ //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
