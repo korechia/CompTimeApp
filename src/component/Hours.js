@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import "./Comptime.css";
+//$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
+import { database, app} from '../firebase.js';
+import { getDatabase, ref, push, set, child ,get} from "firebase/database";
+//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
 
 class Hours extends Component {
 constructor(props) {
