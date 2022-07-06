@@ -22,6 +22,7 @@ class Modalref extends Component {
     document.removeEventListener("mousedown", this.handleClickOutside);
   }
 	
+//$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%	
 	 signout=async()=>{
 const auth = getAuth();
 await signOut(auth).then(() => {
@@ -34,6 +35,9 @@ await signOut(auth).then(() => {
 this.open()
 
 }
+//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
+
+
 
 	open(){
 		var modald=document.getElementsByClassName("modal")[0].style.display;
@@ -59,6 +63,7 @@ this.open()
 <div id="myModal" class="modal">
 
   <div class="modal-content">
+	{/*$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%*/}
    {this.props.usernamestate.Authenticated ?(
    <ul>
    <li><Link to="AddHours" onClick={this.open}>Add Hours</Link>
@@ -77,6 +82,7 @@ this.open()
           </li>
         </ul>
         )}
+	{/*END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!*/}
   </div>
 
 </div>
