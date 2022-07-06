@@ -21,39 +21,33 @@ class MyRouter extends Component {
       <div>
 
         <Routes>
-         <Route path="/AddHours" 
+         <Route path="/AddHours"
+    {//Pieces:$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%}
         element= {<AddHours 
-    //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
           changeUser = {this.props.changeUser} 
           CalcHours={this.props.CalcHours}
-  //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
           usernamestate={this.props.usernamestate}
         />} />
         <Route path="/RequestHours" 
         element= {<Hours 
-//$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
          changeUser = {this.props.changeUser} 
           CalcHours={this.props.CalcHours}
-//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
           usernamestate={this.props.usernamestate}
         />} />
           <Route path="/History" 
-          element={<History
-                   {//$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%                  
+          element={<History                 
           changeUser = {this.props.changeUser} 
           CalcHours={this.props.CalcHours}
-  //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
           usernamestate={this.props.usernamestate}
            />} />
  <Route path="/" 
-          element={<Signon
-//$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%                 
+          element={<Signon                
           changeUser = {this.props.changeUser} 
           CalcHours={this.props.CalcHours}
-//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
           usernamestate={this.props.usernamestate}
            />} />
         </Routes>
+{//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!}
       </div>
   )}
 }
