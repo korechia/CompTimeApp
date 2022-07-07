@@ -1,8 +1,39 @@
-## Welcome to GitHub Pages
+## Welcome to GitHub Home Page
 
-You can use the [editor on GitHub](https://github.com/korechia/CompTimeApp/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Link to Repository [editor on GitHub](https://github.com/korechia/CompTimeApp/) 
 
-Sand box allows you to edit code a preview output in the same location. link to [Code sandbox Editor][https://codesandbox.io/s/github/korechia/CompTimeApp/?file=/src/App.js](https://codesandbox.io/s/delicate-rain-llhpve)
+Sand box allows you to edit code a preview output in the same location.
+
+The link to [Code sandbox Editor for main branch][https://codesandbox.io/s/github/korechia/CompTimeApp/?file=/src/App.js](https://codesandbox.io/s/delicate-rain-llhpve)
+
+
+Link to [Code SandBox Wizard](https://codesandbox.io/s/github). This allows you to enter any github url and begin editing in a web ide.
+Code sandbox will update the ui outcome of your code as you are typing.
+
+
+## Introduction
+I used the following libraries and applications to make my app to record comp time for our group:
+
+**Homebrew**-Application to easily download necessary packages to app. (similar to chocolaty on windows). This is used the the command line of the computer.
+**React**-React is a javascript library that is used to build User interfaces. Allowing code to be seperated into reusable funcational components.
+**JSX**-Language similar to html. Used in React.
+**CSS**- Language for Formating website.
+**Firebase**-Used Free Firebase realtime database and authenticator
+**Git hub**-Used for Free Version control. This is connected to Heroku for hosting. I used git pages to create a website for easy access to the CompTime app repository.
+**Heroku** -Used for Free Hosting 
+
+
+I will be going through Comp Time App Functionality:
+
+0. Basics of how react works                             (variables,functions,classes, routing basics)
+1. Calculate number of hours left.                       (read from the database, Firbase setup)
+2. Request hours and add hours earned.                   (Write to the database and use input jsx tags)
+4. See history of hours earned and used.                 (Create tables and jsx syntax that can be used)
+5. Log in and out.                                       (Authentication of firebase)
+6. Show heroku account.                                  (Update branch through terminal. Connected to git)
+7. show how apps version control system.                 (create a branch for people to play with in code sandbox)
+8. Suggest possible features that could be added         (Let them work on these features in thier sandbox)
+
 
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
