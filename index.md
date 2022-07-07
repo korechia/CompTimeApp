@@ -4,7 +4,7 @@ Link to Repository [editor on GitHub](https://github.com/korechia/CompTimeApp/)
 
 Sand box allows you to edit code a preview output in the same location.
 
-The link to [Code sandbox Editor for main branch][https://codesandbox.io/s/github/korechia/CompTimeApp/?file=/src/App.js](https://codesandbox.io/s/delicate-rain-llhpve)
+The link to [Code sandbox Editor for main branch](https://codesandbox.io/s/github/korechia/CompTimeApp/?file=/src/App.js)
 
 
 Link to [Code SandBox Wizard](https://codesandbox.io/s/github). This allows you to enter any github url and begin editing in a web ide.
