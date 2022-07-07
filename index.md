@@ -15,11 +15,17 @@ Code sandbox will update the ui outcome of your code as you are typing.
 I used the following libraries and applications to make my app to record comp time for our group:
 
 **Homebrew**-Application to easily download necessary packages to app. (similar to chocolaty on windows). This is used the the command line of the computer.
-**React**-React is a javascript library that is used to build User interfaces. Allowing code to be seperated into reusable funcational components.
+
+**React**-React is a javascript library that is used to build User interfaces. Allowing code to be separated into reusable functional components.
+
 **JSX**-Language similar to html. Used in React.
+
 **CSS**- Language for Formating website.
+
 **Firebase**-Used Free Firebase realtime database and authenticator
+
 **Git hub**-Used for Free Version control. This is connected to Heroku for hosting. I used git pages to create a website for easy access to the CompTime app repository.
+
 **Heroku** -Used for Free Hosting 
 
 
