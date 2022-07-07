@@ -13,8 +13,8 @@ import {
 export class App extends Component {
    constructor(props){
     super(props);
-    this.state={user:"korechia",
-    name:"Kathleen",
+    this.state={user:"undefined",
+    name:"undefined",
              hours:0,
     }
   }
