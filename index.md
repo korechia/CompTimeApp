@@ -41,6 +41,10 @@ I will be going through Comp Time App Functionality:
 8. Suggest possible features that could be added         (Let them work on these features in thier sandbox)
 
 
+Comp Time App Component Map
+<img src="/CompTimeApplicationMap.png">
+
+
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
