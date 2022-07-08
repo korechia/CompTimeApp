@@ -29,16 +29,17 @@ I used the following libraries and applications to make my app to record comp ti
 **Heroku** -Used for Free Hosting 
 
 
-I will be going through Comp Time App Functionality:
+Each step of the tutorial I will be adding addional functionality to the app untill full functionality is reached.
+Here is the order I will present the React and My CompTime App:
 
-0. Basics of how react works                             (variables,functions,classes, routing basics)
-1. Calculate number of hours left.                       (read from the database, Firbase setup)
-2. Request hours and add hours earned.                   (Write to the database and use input jsx tags)
-4. See history of hours earned and used.                 (Create tables and jsx syntax that can be used)
-5. Log in and out.                                       (Authentication of firebase)
-6. Show heroku account.                                  (Update branch through terminal. Connected to git)
-7. show how apps version control system.                 (create a branch for people to play with in code sandbox)
-8. Suggest possible features that could be added         (Let them work on these features in thier sandbox)
+0. Basics of how react works             Tutorial part1 Skeleton   (variables,classes, routing basics)
+1. Calculate number of hours left.       Tutorial Part2            (read from the database, Firbase setup)
+2. Request hours and add hours earned.   Totorial Part3            (Write to the database and use input jsx tags)
+4. See history of hours earned and used. Totorial Part4            (Create tables and jsx syntax that can be used)
+5. Log in and out.                       Tutorial Part5 Full App   (Authentication of firebase)
+6. Show heroku account.                                            (Update branch through terminal. Connected to git)
+7. show how apps version control system.                           (create a branch for people to play with in code sandbox)
+8. Suggest possible features that could be added                   (Let them work on these features in thier sandbox)
 
 
 Comp Time App Component Map
