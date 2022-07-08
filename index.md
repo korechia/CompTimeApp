@@ -42,8 +42,8 @@ Here is the order I will present the React and My CompTime App:
 8. Suggest possible features that could be added                   (Let them work on these features in thier sandbox)
 
 
-Comp Time App Component Map
-<img src="/CompTimeApplicationMap.png">
+Comp Time App Class Component Map
+![Image](CompTimeApplicationMap.png)
 
 
 
