@@ -43,7 +43,7 @@ Here is the order I will present the React and My CompTime App:
 
 
 Comp Time App Class Component Map
-![Image](CompTimeApplicationMap.png)
+![CompTimeApplicationMap](CompTimeApplicationMap.png)
 
 
 
