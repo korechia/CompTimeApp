@@ -32,15 +32,12 @@ I used the following libraries and applications to make my app to record comp ti
 Each step of the tutorial I will be adding addional functionality to the app untill full functionality is reached.
 Here is the order I will present the React and My CompTime App:
 
-1.React Tutorial
-  - Basics of how react works ------------------ (variables,classes, routing basics)'Skeleton of App'
-  - Calculate number of hours left ------------- (read from the database, Firbase setup)
-  - Request hours and add hours earned. -------- (Write to the database and use input jsx tags)
-  - See history of hours earned and used. ------ (Create tables and jsx syntax that can be used)
-  - Log in and out. ---------------------------- (Authentication of firebase)'Full App'  
-2. Show heroku account. --------------------------- (Update branch through terminal. Connected to git)  
-3. show how apps version control system. ---------- (create a branch for people to play with in code sandbox)  
-4. Suggest possible features that could be added -- (Let them work on these features in thier sandbox)  
+React Tutorial
+  1. Basics of how react works ------------------ (variables,classes, routing basics)'Skeleton of App'
+  2. Calculate number of hours left ------------- (read from the database, Firbase setup)
+  3. Request hours and add hours earned. -------- (Write to the database and use input jsx tags)
+  4. See history of hours earned and used. ------ (Create tables and jsx syntax that can be used)
+  5. Log in and out. ---------------------------- (Authentication of firebase)'Full App' 
 
 
 Comp Time App Class Component Map
