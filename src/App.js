@@ -38,13 +38,15 @@ componentDidMount(){
         console.log("true"+user)
         console.log(user)
         var email=user.email.substr(0, user.email.indexOf('@'));
-      this.setState({Authenticated:true},this.changeUser(email,user.displayName,this.CalcHours,email))
+      this.setState({Authenticated:true},
+                    this.changeUser(email,user.displayName,this.CalcHours,email))
         if( window.location.pathname == "/"){
         window.location.href = '/RequestHours'; 
         }
       }else{
         console.log("false"+user)
-        this.setState({Authenticated:false}, this.changeUser("undefined","undefined",this.CalcHours,"undefined"));
+        this.setState({Authenticated:false},
+                      this.changeUser("undefined","undefined",this.CalcHours,"undefined"));
         //alert("You are not Authenticated")
         }
 })
