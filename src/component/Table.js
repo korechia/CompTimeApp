@@ -8,7 +8,7 @@ import { getDatabase, ref, child, get,update} from 'firebase/database';
 class Table extends Component {
   constructor(props) {
     super(props);
-    this.state ={Program:"History", ignore:false}
+    this.state ={ignore:false}
   }
   IgnoreVoid = ()=>{
     this.setState({ignore:!this.state.ignore})
@@ -27,12 +27,17 @@ class Table extends Component {
   this.props.CalcHours();
   }
   render() {
-       var haskey=(this.props.usernamestate.response!=undefined && !!Object.keys(this.props.usernamestate.response).length);
+       var haskey=(this.props.usernamestate.response!=undefined 
+                   && !!Object.keys(this.props.usernamestate.response).length);
     if(haskey){
     return (<div>
  
   <caption>{this.props.usernamestate.name}: Add/Used Hours               
-  {this.props.Program=="History" && <span className="tab"> <button onClick={this.IgnoreVoid}>{this.state.ignore ? ("show void"):("ignore void")}</button></span>}</caption>
+  {this.props.Program=="History" && <span className="tab"> 
+   <button onClick={this.IgnoreVoid}>
+     {this.state.ignore ? ("show void"):("ignore void")}
+ </button></span>}
+  </caption>
  <thead>
   <th>Start Date Time</th>
   <th>End Date Time</th>
@@ -47,32 +52,48 @@ class Table extends Component {
   {Object.keys(this.props.usernamestate.response).map(item=>{
     var Hdata=this.props.usernamestate.response[item];
     var add=false;
-    if (Hdata.enddate>this.props.GetCurrentDate() && Hdata.numhours<0 && this.props.Program=="Request Hours"){
+   
+    if (Hdata.enddate>this.props.GetCurrentDate() 
+        && Hdata.numhours<0 && this.props.Program=="Request Hours"){
  return(
   <tr><td>
 {Hdata.startdate} {Hdata.starttime}</td><td>
 {Hdata.enddate} {Hdata.endtime}</td><td>
 {Hdata.numhours} </td><td>
 {Hdata.Approved} </td><td>
-<button id={item} onClick={(event)=>(this.Cancel(event))} > Cancel</button></td></tr>)
+<button 
+   id={item} 
+   onClick={(event)=>(this.Cancel(event))} > 
+   Cancel</button></td></tr>)
 }
-  if (Hdata.CreateDate==this.props.GetCurrentDate() && Hdata.numhours>0 && this.props.Program=="Add Hours"){
+    
+  if (Hdata.CreateDate==this.props.GetCurrentDate() 
+   && Hdata.numhours>0 && this.props.Program=="Add Hours"){
  return(
   <tr><td>
 {Hdata.startdate} {Hdata.starttime}</td><td>
 {Hdata.enddate} {Hdata.endtime}</td><td>
-{Hdata.numhours} </td><td>
-<button id={item}  onClick={(event)=>(this.Cancel(event))}> Cancel</button></td></tr>)
+{Hdata.numhours} </td><td>  
+<button 
+   id={item}  
+   onClick={(event)=>(this.Cancel(event))}>
+    Cancel</button></td></tr>)
 }
-if(this.props.Program=="History" && (Hdata.Void=="N" || (Hdata.Void=="Y" && !this.state.ignore))){
+
+if(this.props.Program=="History" 
+   && (Hdata.Void=="N" || (Hdata.Void=="Y" && !this.state.ignore))){
     return(
   <tr><td>
 {Hdata.startdate} {Hdata.starttime}</td><td>
 {Hdata.enddate} {Hdata.endtime}</td><td>
 {Hdata.numhours} </td><td>
 {Hdata.Void} </td><td>
-<button id={item} onClick={(event)=>(this.Cancel(event))}> Cancel</button></td></tr>)}}
+<button 
+id={item}
+onClick={(event)=>(this.Cancel(event))}>
+ Cancel</button></td></tr>)}}
 )}
+
 </tbody>
 </div>
         )
