@@ -1,6 +1,8 @@
 ## Welcome to GitHub Home Page
 
-Link to Repository [editor on GitHub](https://github.com/korechia/CompTimeApp/) 
+Link to [Comp Time Application](https://comptimeapp.herokuapp.com/)
+
+Link to [Repository on GitHub](https://github.com/korechia/CompTimeApp/) 
 
 Sand box allows you to edit code a preview output in the same location.
 
