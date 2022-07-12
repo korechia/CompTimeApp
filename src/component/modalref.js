@@ -45,11 +45,14 @@ openclose(){
 
   <div class="modal-content">
    <ul>
-   <li><Link to="AddHours" onClick={this.openclose}>Add Hours</Link>
+   <li><Link to="AddHours" 
+	onClick={this.openclose}>Add Hours</Link>
           </li>
-   		<li><Link to="/RequestHours" onClick={this.openclose}>Request Hours</Link>
+   <li><Link to="/RequestHours" 
+        onClick={this.openclose}>Request Hours</Link>
           </li>
-          <li><Link to="/History" onClick={this.openclose}>History</Link>
+   <li><Link to="/History" 
+       onClick={this.openclose}>History</Link>
           </li>
           </ul>
   </div>
