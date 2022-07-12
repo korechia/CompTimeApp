@@ -19,15 +19,15 @@ class Modalref extends Component {
    componentWillUnmount() {
     document.removeEventListener("mousedown", this.handleClickOutside);
   }
-
-	open(){
-		var modald=document.getElementsByClassName("modal")[0].style.display;
-			if (modald=="block"){
-				document.getElementsByClassName("modal")[0].style.display="none";
-			}else{
-			document.getElementsByClassName("modal")[0].style.display="block";
-		}
-		}
+//Another way to write a function 'open=()=>{}' called an arrow function
+openclose(){
+	var modald=document.getElementsByClassName("modal")[0].style.display;
+	if (modald=="block"){
+		document.getElementsByClassName("modal")[0].style.display="none";
+	}else{
+		document.getElementsByClassName("modal")[0].style.display="block";
+	}
+	}
 
 	handleClickOutside(event) {
     if (this.wrapperRef && !this.wrapperRef.current.contains(event.target)) {
@@ -38,18 +38,18 @@ class Modalref extends Component {
     return (
     	<div ref={this.wrapperRef} className="order">
     <div class= "modalbutton">
-        <button id="myBtn" onClick={this.open}><img src={buttonpic} /></button>
+        <button id="myBtn" onClick={this.openclose}><img src={buttonpic} /></button>
         </div>
 	
 <div id="myModal" class="modal">
 
   <div class="modal-content">
    <ul>
-   <li><Link to="AddHours" onClick={this.open}>Add Hours</Link>
+   <li><Link to="AddHours" onClick={this.openclose}>Add Hours</Link>
           </li>
-   		<li><Link to="/RequestHours" onClick={this.open}>Request Hours</Link>
+   		<li><Link to="/RequestHours" onClick={this.openclose}>Request Hours</Link>
           </li>
-          <li><Link to="/History" onClick={this.open}>History</Link>
+          <li><Link to="/History" onClick={this.openclose}>History</Link>
           </li>
           </ul>
   </div>
