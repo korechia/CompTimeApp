@@ -68,17 +68,21 @@ this.open()
    <ul>
    <li><Link to="AddHours" onClick={this.open}>Add Hours</Link>
           </li>
-   		<li><Link to="/RequestHours" onClick={this.open}>Request Hours</Link>
+   <li><Link to="/RequestHours"
+        onClick={this.open}>Request Hours</Link>
           </li>
-          <li><Link to="/History" onClick={this.open}>History</Link>
+          <li><Link to="/History"
+    		onClick={this.open}>History</Link>
           </li>
-          <li><Link to="/" onClick={this.signout}>Log Out</Link>
+          <li><Link to="/" 
+    		onClick={this.signout}>Log Out</Link>
           </li>
           </ul>
           ):(
           <ul>
           <li>
-            <Link to="/" onClick={this.open}>Home</Link>
+            <Link to="/" 
+		onClick={this.open}>Home</Link>
           </li>
         </ul>
         )}
