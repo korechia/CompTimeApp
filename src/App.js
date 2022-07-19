@@ -14,8 +14,8 @@ import {
 export class App extends Component {
    constructor(props){
     super(props);
-    this.state={user:"korechia",
-    name:"Kathleen",
+    this.state={user:"undefined",
+    name:"undefined",
              hours:0,
     }
   }
@@ -35,9 +35,11 @@ export class App extends Component {
      var promise= this.getData();
       console.log(promise);
       promise.then((snapshot)=>{
-  console.log("value in promise")
+  console.log("Data in snapshot(promise)")
   console.log(snapshot)
   if (snapshot.exists()) {
+    console.log("value in promise")
+  console.log(snapshot.val())
      var data = snapshot.val();
     this.setState({response:data.newhistory,
       all:data})
