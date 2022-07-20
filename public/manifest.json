@@ -33,7 +33,7 @@
       "sizes": "512x512"
     }
   ],
-  "scope":"/",
+  "scope":"https://comptimeapp.herokuapp.com/",
   "id":"/",
   "start_url": "/",
   "display": "standalone",
