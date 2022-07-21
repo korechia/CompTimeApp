@@ -138,6 +138,9 @@ return promise
   render() {
     return (
       <Router>
+       <head>
+      <link rel="manifest" href="/public/manifest.json"/>
+      </head>
       <div>
       <Header
       changeUser = {this.changeUser} 
