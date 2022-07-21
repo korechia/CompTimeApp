@@ -14,8 +14,7 @@ root.render(
   	console.log("inininininininininininini")
   	console.log(link)
   	console.log(lhref)
-  	console.log(!navigator.serviceWorker.controller);
-    if (!navigator.serviceWorker.controller) {
+    if ("serviceWorker" in navigator) {
     	console.log("insideif")
      navigator.serviceWorker.register(link).then((reg)=>{
      	console.log(reg.scope);
