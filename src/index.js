@@ -9,9 +9,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   {(()=>{
-  	var link= window.location.href+'sw.js';
+  	var link= window.location.origin+'/sw.js';
+  	var lhref= window.location.href+'sw.js';
   	console.log("inininininininininininini")
-  	console.log(window.location.href)
+  	console.log(link)
+  	console.log(lhref)
+  	console.log(!navigator.serviceWorker.controller);
     if (!navigator.serviceWorker.controller) {
     	console.log("insideif")
      navigator.serviceWorker.register(link).then((reg)=>{
