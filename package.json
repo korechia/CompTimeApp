@@ -1,5 +1,5 @@
 {
-  "name": "pwa-comptime",
+  "name": "testsandbox",
   "version": "0.1.0",
   "homepage": "https://comptimeapp.herokuapp.com/",
   "private": true,
@@ -45,7 +45,7 @@
   "devDependencies": {
     "gh-pages": "^4.0.0"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -55,5 +55,6 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/korechia/CompTimeApp/issues"
-  }
+  },
+  "keywords": []
 }

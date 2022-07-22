@@ -23,15 +23,9 @@ class Modalref extends Component {
   }
 	
 //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%	
-	 signout=async()=>{
+	 signout=()=>{
 const auth = getAuth();
-await signOut(auth).then(() => {
-  // Sign-out successful.
-   this.props.Authenticate();
-}).catch((error) => {
-  // An error happened.
-  //alert(error)
-});
+ signOut(auth);
 this.open()
 
 }
