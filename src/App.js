@@ -158,7 +158,7 @@ export class App extends Component {
         if (snapshot.exists()) {
           info = snapshot.val();
           this.setState({ response: info.newhistory, all: info });
-          if (this.state.definesuper) {
+          if (this.state.definesuper && "supervisorOf" in info) {
             this.setState({ supervisorOf: info.supervisorOf });
           }
           console.log("i" + info);
