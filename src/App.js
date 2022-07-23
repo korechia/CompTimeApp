@@ -87,13 +87,6 @@ export class App extends Component {
       },
       fun
     );
-    console.log("definesuper");
-    console.log(definesuper);
-    console.log(this.state.all);
-    console.log(this.state.all.supervisorOf);
-    if (definesuper && this.state.all.supervisorOf !== undefined) {
-      this.setState({ supervisorOf: this.state.all.supervisorOf });
-    }
   };
   GetCurrentDate = () => {
     var today = new Date();
