@@ -12,6 +12,12 @@ class History extends Component {
 
   render() {
     return (
+           {/*$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%*/}
+         <DirectButtons 
+    usernamestate={this.props.usernamestate}
+    fun={this.props.CalcHours}
+    changeUser={this.props.changeUser} />
+      {/*END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!*/}
     <div>
      	   <div class="or"><h4> {this.props.usernamestate.name}:Comp Time History</h4>
      	   <h6 className="line"> Hours Left:{this.props.usernamestate.hours}</h6>
