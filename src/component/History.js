@@ -2,7 +2,9 @@
 import React, { Component} from 'react';  
 import "./Comptime.css";
 import Table from "./Table.js";
-
+//$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
+import DirectButtons from "./DirectButtons.js";
+//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
 
 class History extends Component {
     constructor(props){
