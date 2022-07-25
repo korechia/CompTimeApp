@@ -43,18 +43,18 @@ componentDidMount(){
         console.log(user)
         var email=user.email.substr(0, user.email.indexOf('@'));
       this.setState({Authenticated:true},
-                    //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$% 
-                    this.changeUser(email,user.displayName,this.CalcHours,email,user.displayname))
-          //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
+//$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$% 
+                    this.changeUser(email,user.displayName,this.CalcHours,email,user.displayName))
+//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
         if( window.location.pathname == "/"){
         window.location.href = '/RequestHours'; 
         }
       }else{
         console.log("false"+user)
         this.setState({Authenticated:false},
-                      //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$% 
+ //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$% 
                       this.changeUser("undefined","undefined",this.CalcHours,"undefined","undefined"));
-          //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
+//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
         //alert("You are not Authenticated")
         }
 })
@@ -88,20 +88,27 @@ componentDidMount(){
     } else {
       definesuper = true;
     }   
+    console.log(Uname)
      this.setState({user:Uname,
     name:NameD,
      superuser: superuser,
      supername: supername,
      definesuper: definesuper              
-      },fun);
-     this.ShouldSetupSupervisor(this.getData())
-   //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!  
+      },this.GatherData); 
    //var total=this.CalcHours();
-  console.log("hour");
   }
-   CalcHours=()=>{
+
+  GatherData=()=>{
+    console.log("gather")
+    console.log(this.state.user)
+    var promise=this.getData()
+    this.ShouldSetupSupervisor(promise);
+    this.CalcHours(promise);
+  }
+
+   CalcHours=(promise)=>{
+ //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!     
     console.log("calculate");
-     var promise= this.getData();
       console.log(promise);
       promise.then((snapshot)=>{
   console.log("value in promise")
@@ -143,14 +150,19 @@ return total;
 var promise=get(child(ref(database),"Users/"+this.state.user))
 return promise;
 }
+  
 //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$% 
 ShouldSetupSupervisor(promise){
-   promise
-      .then((snapshot) => {
+  console.log("herehe")
+  promise.then((snapshot) => {
         if (snapshot.exists()) {
-          info = snapshot.val();
+          console.log(snapshot.value)
+         var  info = snapshot.val();
           if (this.state.definesuper && "supervisorOf" in info) {
             this.setState({ supervisorOf: info.supervisorOf });
+          
+          console.log("ans")
+          console.log(this.state.supervisorOf);
           }
         }
       })
