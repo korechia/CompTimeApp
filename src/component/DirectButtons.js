@@ -1,3 +1,4 @@
+//$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
 import React, { Component } from "react";
 import "./Comptime.css";
 
@@ -35,3 +36,4 @@ export default class DirectButtons extends Component {
     );
   }
 }
+//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
