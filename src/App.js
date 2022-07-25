@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import Header from "./component/header.js";
 import { database, app} from './firebase.js';
 import { getDatabase, ref, child, get} from 'firebase/database';
- //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
 import {getAuth} from "firebase/auth";
- //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
 import Myrouter from "./component/Myrouter.js";
 import {
   BrowserRouter as Router,
@@ -22,9 +20,15 @@ export class App extends Component {
              hours:0,
                      response:[],
              Authenticated:true,
+//$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%             
+      definesuper: false,
+      superuser: "undefined",
+      supername: "undefined",
+      supervisorOf: []         
     }
+//END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
   }
-//$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%
+ 
 componentDidMount(){
   this.Authenticate()
   console.log(window.location.pathname)
@@ -52,7 +56,6 @@ componentDidMount(){
 })
 
 }
-   //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
     GetCurrentDate=()=>{
     var today = new Date();
     return this.formatDate(today);
@@ -73,8 +76,22 @@ componentDidMount(){
 }
 
     changeUser = (Uname,NameD,fun)=> {
-      this.setState({user:Uname,
-    name:NameD},fun);
+   //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%  
+        var definesuper = false;
+    if (superuser == null) {
+      superuser = this.state.superuser;
+      supername = this.state.supername;
+    } else {
+      definesuper = true;
+    }   
+     this.setState({user:Uname,
+    name:NameD
+     superuser: superuser,
+     supername: supername,
+     definesuper: definesuper              
+      },fun);
+     this.ShouldSetupSupervisor(this.GetData())
+   //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!  
    //var total=this.CalcHours();
   console.log("hour");
   }
@@ -122,18 +139,29 @@ return total;
 var promise=get(child(ref(database),"Users/"+this.state.user))
 return promise;
 }
+//$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$% 
+ShouldSetupSupervisor(promise){
+   promise
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          info = snapshot.val();
+          if (this.state.definesuper && "supervisorOf" in info) {
+            this.setState({ supervisorOf: info.supervisorOf });
+          }
+        }
+      })
+}
+ //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
 
   render() {
     return (
       <Router>
       <div>
-     {/*$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%*/}
       <Header
       changeUser = {this.changeUser} 
       usernamestate={this.state}
       Authenticate={this.Authenticate}
   />
-       {/*END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!*/}
       <div Class="body">
       <Myrouter
         usernamestate={this.state}
