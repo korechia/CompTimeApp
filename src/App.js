@@ -43,14 +43,18 @@ componentDidMount(){
         console.log(user)
         var email=user.email.substr(0, user.email.indexOf('@'));
       this.setState({Authenticated:true},
-                    this.changeUser(email,user.displayName,this.CalcHours,email))
+                    //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$% 
+                    this.changeUser(email,user.displayName,this.CalcHours,email,user.displayname))
+          //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
         if( window.location.pathname == "/"){
         window.location.href = '/RequestHours'; 
         }
       }else{
         console.log("false"+user)
         this.setState({Authenticated:false},
-                      this.changeUser("undefined","undefined",this.CalcHours,"undefined"));
+                      //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$% 
+                      this.changeUser("undefined","undefined",this.CalcHours,"undefined","undefined"));
+          //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!
         //alert("You are not Authenticated")
         }
 })
@@ -74,9 +78,9 @@ componentDidMount(){
   }
   return [year, month, day].join('-');
 }
-
-    changeUser = (Uname,NameD,fun)=> {
+  
    //$%$%$ NEW CODE! $%$% NEW CODE! $%$%$%$% NEW CODE! $%$%$%  
+      changeUser = (Uname,NameD,fun,superuser,supername)=> {
         var definesuper = false;
     if (superuser == null) {
       superuser = this.state.superuser;
@@ -90,7 +94,7 @@ componentDidMount(){
      supername: supername,
      definesuper: definesuper              
       },fun);
-     this.ShouldSetupSupervisor(this.GetData())
+     this.ShouldSetupSupervisor(this.getData())
    //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!  
    //var total=this.CalcHours();
   console.log("hour");
