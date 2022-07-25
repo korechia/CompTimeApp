@@ -85,7 +85,7 @@ componentDidMount(){
       definesuper = true;
     }   
      this.setState({user:Uname,
-    name:NameD
+    name:NameD,
      superuser: superuser,
      supername: supername,
      definesuper: definesuper              
