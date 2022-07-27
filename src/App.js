@@ -110,6 +110,9 @@ componentDidMount(){
  //END NEW CODE! $%$%$% END NEW CODE! $%$%$%$% END NEW CODE!     
     console.log("calculate");
       console.log(promise);
+     if(promise==null){
+        promise=this.getData()
+      }
       promise.then((snapshot)=>{
   console.log("value in promise")
   console.log(snapshot)
