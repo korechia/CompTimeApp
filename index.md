@@ -41,7 +41,7 @@ React Tutorial
   4. See history of hours earned and used. ------ (Create tables and jsx syntax that can be used)
   5. Log in and out. ---------------------------- (Authentication of firebase)'Full App' 
   6. Buttons to see other user info ............. (Example Solution to button problem)
-      - Code imacted with step6 App.js,History.js,DirectButtons.js
+      - Code impacted App.js,History.js,DirectButtons.js
 
 Comp Time App Class Component Map
 ![CompTimeApplicationMap](CompTimeApplicationMap.png)
